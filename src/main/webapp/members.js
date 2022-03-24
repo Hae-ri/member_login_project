@@ -37,3 +37,17 @@ function infoConfirm() {
 	
 	document.reg_frm.submit();
 }
+
+function updateInfoCheck() {
+	if(document.reg_frm.pw.value.length == 0){
+		alert("비밀번호는 필수사항입니다.");
+		reg_frm.pw.focus();
+		return;
+	}
+	if(document.reg_frm.pw.value != document.reg_frm.pw_check.value){
+		alert("비밀번호가 일치하지 않습니다.");
+		reg_frm.pw.focus();
+		return;
+	}
+	document.reg_frm.submit();
+}
